@@ -34,7 +34,6 @@ class CrudPDO
     public static function dbControl($tableName, $returnType = false, $except = false, $columnName = '*', $rowName = null, $toBeControlled = null, $isArray = false, $onlyOne=true)
     {
         if (!$toBeControlled && !$rowName && $returnType == true && $except == false && !$isArray) {
-
             try {
                 $control = self::$db->prepare("SELECT {$columnName} FROM {$tableName}");
                 $control->execute();
