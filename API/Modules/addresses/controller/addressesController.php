@@ -76,5 +76,34 @@ class addressesController extends mainController
         }
     }
 
+    public static function delete()
+    {
+        if(isset($_POST)) {
+            $postArray = \mHelper\mVariables::mReArray($_POST);
+            $apiOk = self::$CrudPDO::apiKeyControl($postArray['user_apiKey'], $postArray['session_email']);
+            unset($postArray['session_email']);
+
+            if (!$apiOk) {
+                self::$returnArray['message'] = 'API Key does not match';
+                print_r(json_encode(self::$returnArray));
+                return;
+            }
+
+            unset($postArray['user_apiKey']);
+
+            $delete = self::$CrudPDO::deleteFromDB($postArray['tableName'], $postArray['id']);
+
+            if (@!$delete['Error']) {
+                self::$returnArray['status'] = true;
+                self::$returnArray['message'] = 'Data deleted successfully';
+                print_r(json_encode(self::$returnArray));
+            } else {
+                self::$returnArray['message'] = 'Data could not be deleted';
+                self::$returnArray['exception'] = $delete['Error'];
+                print_r(json_encode(self::$returnArray));
+            }
+        }
+
+    }
 
 }
