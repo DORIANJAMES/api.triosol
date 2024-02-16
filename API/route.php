@@ -23,7 +23,11 @@ App::postAction('/addresses/add','/addresses/add');
 App::postAction('/addresses/update','/addresses/update');
 App::postAction('/addresses/delete','/addresses/delete');
 
-
+// NEWS Operations Routes
+App::postAction('/news/update','/news/update');
+App::postaction('/news/delete','/news/delete');
+App::postAction('/news/add','/news/add');
+App::postAction('/news/list','/news/list');
 
 ?>
 
