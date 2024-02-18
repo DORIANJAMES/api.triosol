@@ -100,4 +100,33 @@ class newsController extends mainController
             }
         }
     }
+
+    public static function isExists() {
+        if(isset($_POST)) {
+
+            $postArray = mHelper\mVariables::mReArray($_POST);
+            $apiOk = self::$CrudPDO::apiKeyControl($postArray['user_apiKey'], $postArray['session_email']);
+            unset($postArray['session_email']);
+            unset($postArray['user_apiKey']);
+
+            if(!$apiOk) {
+                self::$returnArray['message'] = 'API Key does not match';
+                print_r(json_encode(self::$returnArray));
+                return;
+            }
+
+            $data = self::$newsModel::isExists($postArray);
+
+            if(@!$data['Error']) {
+                self::$returnArray['status'] = true;
+                self::$returnArray['message'] = 'Data exists';
+                self::$returnArray['data'] = $data;
+                print_r(json_encode(self::$returnArray));
+            } else {
+                self::$returnArray['message'] = 'Data does not exist';
+                self::$returnArray['exception'] = $data['Error'];
+                print_r(json_encode(self::$returnArray));
+            }
+        }
+    }
 }

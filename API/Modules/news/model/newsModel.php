@@ -8,7 +8,8 @@ class newsModel extends mainModel
         return self::$CrudPDO::updateOnDB($tableName, $postArray, $id);
     }
 
-    public static function delete($postArray){
+    public static function delete($postArray)
+    {
         return self::$CrudPDO::deleteFromDB($postArray['tableName'], $postArray['id']);
     }
 
@@ -17,5 +18,10 @@ class newsModel extends mainModel
         $tableName = $postArray['tableName'];
         unset($postArray['tableName']);
         return self::$CrudPDO::addToDB($tableName, $postArray);
+    }
+
+    public static function isExists($postArray)
+    {
+        return self::$CrudPDO::dbControl($postArray['tableName'],false,false,'*',$postArray['rowName'],$postArray['toBeControlled'],false,true);
     }
 }

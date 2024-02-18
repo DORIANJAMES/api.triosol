@@ -28,6 +28,7 @@ App::postAction('/news/update','/news/update');
 App::postaction('/news/delete','/news/delete');
 App::postAction('/news/add','/news/add');
 App::postAction('/news/list','/news/list');
+App::postAction('/news/is-exists','/news/isExists');
 
 ?>
 
