@@ -33,5 +33,12 @@ App::postAction('/news/is-exists','/news/isExists');
 // MAINBANNER Operations Routes
 App::postAction('/mainBanner/update','/mainBanner/update');
 
+// SUBBANNER Operations Routes
+App::postAction('/subBanner/update','/subBanner/update');
+
+// PRODUCTSFRONT Operations Routes
+App::postAction('/services/update','/services/update');
+
+
 ?>
 
