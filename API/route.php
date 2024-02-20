@@ -36,8 +36,11 @@ App::postAction('/mainBanner/update','/mainBanner/update');
 // SUBBANNER Operations Routes
 App::postAction('/subBanner/update','/subBanner/update');
 
-// PRODUCTSFRONT Operations Routes
+// SERVICES Operations Routes
 App::postAction('/services/update','/services/update');
+
+// INFOAREA Operations Routes
+App::postAction('/infoArea/update','/infoArea/update');
 
 
 ?>
