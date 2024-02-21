@@ -42,6 +42,11 @@ App::postAction('/services/update','/services/update');
 // INFOAREA Operations Routes
 App::postAction('/infoArea/update','/infoArea/update');
 
+// INFOCARDS Operations Routes
+App::postAction('/infoCards/add','/infoCards/add');
+App::postAction('/infoCards/update','/infoCards/update');
+App::postAction('/infoCards/delete','/infoCards/delete');
+
 
 ?>
 
