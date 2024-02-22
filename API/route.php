@@ -50,6 +50,12 @@ App::postAction('/infoCards/delete','/infoCards/delete');
 // BELTBANNER Operations Routes
 App::postAction('/beltBanner/update','/beltBanner/update');
 
+// FAQAREA Operations Routes
+App::postAction('/faqArea/update','/faqArea/update');
+
+// CONTACTMAIN Operations Routes
+App::postAction('/contactMain/update','/contactMain/update');
+
 
 ?>
 
