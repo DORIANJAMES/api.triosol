@@ -56,6 +56,11 @@ App::postAction('/faqArea/update','/faqArea/update');
 // CONTACTMAIN Operations Routes
 App::postAction('/contactMain/update','/contactMain/update');
 
+// SERVICESCARDS Operations Routes
+App::postAction('/servicesCards/update','/servicesCards/update');
+App::postAction('/servicesCards/add','/servicesCards/add');
+App::postAction('/servicesCards/delete','/servicesCards/delete');
+
 
 ?>
 
