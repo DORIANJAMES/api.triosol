@@ -66,6 +66,11 @@ App::postAction('/servicesCards/update','/servicesCards/update');
 App::postAction('/servicesCards/add','/servicesCards/add');
 App::postAction('/servicesCards/delete','/servicesCards/delete');
 
+// PRODUCTS Operations Routes
+App::postAction('/products/update','/products/update');
+App::postAction('/products/add','/products/add');
+App::postAction('/products/delete','/products/delete');
+
 
 ?>
 
