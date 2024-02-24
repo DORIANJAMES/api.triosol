@@ -53,6 +53,11 @@ App::postAction('/beltBanner/update','/beltBanner/update');
 // FAQAREA Operations Routes
 App::postAction('/faqArea/update','/faqArea/update');
 
+// FAQQUESTIONS Operations Routes
+App::postAction('/faq/add','/faq/add');
+App::postAction('/faq/update','/faq/update');
+App::postAction('/faq/delete','/faq/delete');
+
 // CONTACTMAIN Operations Routes
 App::postAction('/contactMain/update','/contactMain/update');
 
