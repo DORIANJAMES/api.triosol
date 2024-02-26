@@ -9,4 +9,8 @@ class usersModel extends mainModel {
         unset($returnArray['id']);
         return self::$CrudPDO::updateOnDB($tableName, $returnArray, $id);
     }
+
+    public static function delete($postArray){
+        return self::$CrudPDO::deleteFromDB($postArray['tableName'], $postArray['id']);
+    }
 }
