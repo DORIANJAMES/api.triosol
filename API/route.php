@@ -71,6 +71,9 @@ App::postAction('/products/update','/products/update');
 App::postAction('/products/add','/products/add');
 App::postAction('/products/delete','/products/delete');
 
+// USERS Operations Routes
+App::postAction('/users/update','/users/update');
+App::postAction('/users/add','/users/add');
+App::postAction('/users/delete','/users/delete');
 
 ?>
-
